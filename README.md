@@ -25,6 +25,12 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 - どちらかが勝利した際に、勝利につながった 3 つのマス目をハイライトする。
 - どちらも勝利しなかった場合、結果が引き分けになったというメッセージを表示する。
 
+### Function to add in the future
+
+- new gameボタン追加
+- 勝敗の成績表示
+- プレーヤーの先行後攻を変える
+
 ## Demo
 
 [![Image from Gyazo](https://i.gyazo.com/8d132efeb4146b9be781ecfdd5720138.gif)](https://gyazo.com/8d132efeb4146b9be781ecfdd5720138)
