@@ -4,7 +4,7 @@ import './index.css';
 
 function Square(props) {
   return (
-    <button className="square" onClick={props.onClick}>
+    <button className={`square ${props.isHighlight ? 'highlight' : ''}`} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -12,11 +12,13 @@ function Square(props) {
 
 class Board extends React.Component {
   renderSquare(i) {
+    const isHighlight = this.props.winLines.some(winCell => winCell === i);
     return (
       <Square
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
         key={i}
+        isHighlight={isHighlight}
       />
     );
   }
@@ -59,7 +61,8 @@ class Game extends React.Component {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
-    if (calculateWinner(squares) || squares[i]) {
+    const winner = calculateWinner(current.squares).winner;
+    if (winner || squares[i]) {
       return;
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
@@ -89,8 +92,8 @@ class Game extends React.Component {
 
   render() {
     const history = this.state.history;
-    const current = history[this.state.stepNumber]
-    const winner = calculateWinner((current.squares));
+    const current = history[this.state.stepNumber];
+    const winner = calculateWinner(current.squares).winner;
 
     const moves = history.map((step, move) => {
       const btnClass = this.state.stepNumber === move ? 'bold' : '';
@@ -116,11 +119,12 @@ class Game extends React.Component {
           <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
+            winLines={winner ? calculateWinner(current.squares).winLines : []}
           />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <button onClick={() => {this.toggleAsc()}}>
+          <button onClick={() => this.toggleAsc()}>
             <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>⇄<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
           </button>
           <ol>{this.state.isAsc ? moves : moves.reverse()}</ol>
@@ -151,8 +155,11 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      return {
+        winner: squares[a],
+        winLines: [a, b, c],
+      };
     }
   }
-  return null;
+  return [null];
 }
