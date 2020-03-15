@@ -23,11 +23,12 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 - Board でマス目を並べる部分を、ハードコーディングではなく 2 つのループを使用するように書き換える。
 - 着手履歴のリストを昇順・降順いずれでも並べかえられるよう、トグルボタンを追加する。
 - どちらかが勝利した際に、勝利につながった 3 つのマス目をハイライトする。
-
-### Unfinished function
-
 - どちらも勝利しなかった場合、結果が引き分けになったというメッセージを表示する。
 
 ## Demo
 
 [![Image from Gyazo](https://i.gyazo.com/8d132efeb4146b9be781ecfdd5720138.gif)](https://gyazo.com/8d132efeb4146b9be781ecfdd5720138)
+
+引き分けの場合
+
+[![Image from Gyazo](https://i.gyazo.com/f56d4643dfd0f32aeb44d0a432c560f4.gif)](https://gyazo.com/f56d4643dfd0f32aeb44d0a432c560f4)
