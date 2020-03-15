@@ -51,6 +51,7 @@ class Game extends React.Component {
       }],
       stepNumber: 0,
       xIsNext: true,
+      isAsc: true,
     };
   }
 
@@ -77,6 +78,12 @@ class Game extends React.Component {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2 ) === 0,
+    });
+  }
+
+  toggleAsc() {
+    this.setState({
+      isAsc: !this.state.isAsc,
     });
   }
 
@@ -113,7 +120,10 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <button onClick={() => {this.toggleAsc()}}>
+            <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>⇄<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
+          </button>
+          <ol>{this.state.isAsc ? moves : moves.reverse()}</ol>
         </div>
       </div>
     );
