@@ -3,13 +3,9 @@ tic-tac-toe
 
 Overview
 
-Reactの公式ドキュメントのチュートリアルを元に作成しました。
+Reactの公式ドキュメントのチュートリアルを元に三目並べゲームを作成しました。
 
 [React Tutorial](https://ja.reactjs.org/tutorial/tutorial.html)
-
-三目並べゲーム
-
-[![Image from Gyazo](https://i.gyazo.com/018ba8dbeacc337dde2e757a8454ec3a.png)](https://gyazo.com/018ba8dbeacc337dde2e757a8454ec3a)
 
 ## Description
 
