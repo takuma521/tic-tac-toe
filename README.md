@@ -27,7 +27,7 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 
 ### Original additional functions
 
-- new gameボタン追加
+- next gameボタン追加
 - 勝敗の成績表示
 
 ## Demo
