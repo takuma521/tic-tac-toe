@@ -180,7 +180,7 @@ class Game extends React.Component {
           <div className={'result-name'}>X - Draw - O</div>
           <div>{status.text}</div>
           <button onClick={() => this.toggleAsc()}>
-            <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>⇄<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
+            <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>←→<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
           </button>
           <button onClick={() => this.startNextGame(winner)} disabled={!status.gameIsOver}>Next game</button>
           <ol>{this.state.isAsc ? moves : moves.reverse()}</ol>
