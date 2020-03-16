@@ -90,7 +90,7 @@ class Game extends React.Component {
     });
   }
 
-  startNewGame() {
+  startNextGame() {
     this.setState({
       history: [{
         squares: Array(9).fill(null),
@@ -146,7 +146,7 @@ class Game extends React.Component {
           <button onClick={() => this.toggleAsc()}>
             <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>⇄<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
           </button>
-          <button onClick={() => this.startNewGame()} disabled={!status.gameIsOver}>New game</button>
+          <button onClick={() => this.startNextGame()} disabled={!status.gameIsOver}>Next game</button>
           <ol>{this.state.isAsc ? moves : moves.reverse()}</ol>
         </div>
       </div>
