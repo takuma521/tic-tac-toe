@@ -54,6 +54,11 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
       isAsc: true,
+      result: {
+        xWin: 0,
+        oWin: 0,
+        draw: 0,
+      },
     };
   }
 
@@ -90,7 +95,7 @@ class Game extends React.Component {
     });
   }
 
-  startNextGame() {
+  startNextGame(winner) {
     this.setState({
       history: [{
         squares: Array(9).fill(null),
@@ -100,6 +105,35 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
     });
+    this.countWin(winner);
+  }
+
+  countWin(winner) {
+    if (winner === 'X') {
+      this.setState({
+        result: {
+          xWin: this.state.result.xWin + 1,
+          oWin: this.state.result.oWin,
+          draw: this.state.result.draw,
+        },
+      });
+    } else if (winner === 'O') {
+      this.setState({
+        result: {
+          xWin: this.state.result.xWin,
+          oWin: this.state.result.oWin + 1,
+          draw: this.state.result.draw,
+        },
+      });
+    } else {
+      this.setState({
+        result: {
+          xWin: this.state.result.xWin,
+          oWin: this.state.result.oWin,
+          draw: this.state.result.draw + 1,
+        },
+      });
+    }
   }
 
   render() {
@@ -142,11 +176,13 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
+          <div className={'result'}>{`${this.state.result.xWin} - ${this.state.result.draw} - ${this.state.result.oWin}`}</div>
+          <div className={'result-name'}>X - Draw - O</div>
           <div>{status.text}</div>
           <button onClick={() => this.toggleAsc()}>
             <span className={this.state.isAsc ? 'bold' : ''}>ASC</span>⇄<span className={this.state.isAsc ? '' : 'bold'}>DESC</span>
           </button>
-          <button onClick={() => this.startNextGame()} disabled={!status.gameIsOver}>Next game</button>
+          <button onClick={() => this.startNextGame(winner)} disabled={!status.gameIsOver}>Next game</button>
           <ol>{this.state.isAsc ? moves : moves.reverse()}</ol>
         </div>
       </div>
