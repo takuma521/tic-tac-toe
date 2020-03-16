@@ -9,14 +9,14 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 
 ## Description
 
-### Basic function
+### Tutorial basic functions
 
 - 三目並べが遊べる
 - 決着がついたときに表示ができる
 - ゲーム進行にあわせて履歴が保存される
 - 着手の履歴の見直しや盤面の以前の状態の参照ができる
 
-### Additional function
+### Tutorial additional functions
 
 - 歴内のそれぞれの着手の位置を (col, row) というフォーマットで表示する。
 - 着手履歴のリスト中で現在選択されているアイテムをボールドにする。
@@ -24,9 +24,12 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 - 着手履歴のリストを昇順・降順いずれでも並べかえられるよう、トグルボタンを追加する。
 - どちらかが勝利した際に、勝利につながった 3 つのマス目をハイライトする。
 - どちらも勝利しなかった場合、結果が引き分けになったというメッセージを表示する。
+
+### Original additional functions
+
 - new gameボタン追加
 
-### Function to add in the future
+### Functions to add in the future
 
 - 勝敗の成績表示
 - プレーヤーの先行後攻を変える
