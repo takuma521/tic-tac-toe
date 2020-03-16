@@ -34,8 +34,8 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 
 - Xが勝利した場合
 
-[![Image from Gyazo](https://i.gyazo.com/5c8957329718f75e9539c46a033ab5b5.gif)](https://gyazo.com/5c8957329718f75e9539c46a033ab5b5)
+[![Image from Gyazo](https://i.gyazo.com/7ab96a42d407e39e45febbc934d40bcb.gif)](https://gyazo.com/7ab96a42d407e39e45febbc934d40bcb)
 
 - 引き分けの場合
 
-[![Image from Gyazo](https://i.gyazo.com/a7f619fc4845ca1312dbb8457cf00fb0.gif)](https://gyazo.com/a7f619fc4845ca1312dbb8457cf00fb0)
+[![Image from Gyazo](https://i.gyazo.com/067db4c932c794616f2698c7c263565e.gif)](https://gyazo.com/067db4c932c794616f2698c7c263565e)
