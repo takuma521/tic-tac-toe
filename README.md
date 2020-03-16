@@ -27,19 +27,15 @@ Reactの公式ドキュメントのチュートリアルを元に三目並べゲ
 
 ### Original additional functions
 
-- new gameボタン追加
-
-### Functions to add in the future
-
+- next gameボタン追加
 - 勝敗の成績表示
-- プレーヤーの先行後攻を変える
 
 ## Demo
 
 - Xが勝利した場合
 
-[![Image from Gyazo](https://i.gyazo.com/587a52a1e0aa32b2f9240c7ff6c555c4.gif)](https://gyazo.com/587a52a1e0aa32b2f9240c7ff6c555c4)
+[![Image from Gyazo](https://i.gyazo.com/5c8957329718f75e9539c46a033ab5b5.gif)](https://gyazo.com/5c8957329718f75e9539c46a033ab5b5)
 
 - 引き分けの場合
 
-[![Image from Gyazo](https://i.gyazo.com/7832d177779ce35aa16694bfb32b34f7.gif)](https://gyazo.com/7832d177779ce35aa16694bfb32b34f7)
+[![Image from Gyazo](https://i.gyazo.com/a7f619fc4845ca1312dbb8457cf00fb0.gif)](https://gyazo.com/a7f619fc4845ca1312dbb8457cf00fb0)
